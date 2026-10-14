@@ -1,4 +1,4 @@
-# Fuzzy–PSO Optimized DBSCAN for Non-Spatial Clustering
+#Fuzzy–PSO Optimized DBSCAN for Non-Spatial Clustering
 
 A Streamlit-based web application implementing the hybrid fuzzy–particle swarm optimization DBSCAN framework from the manuscript *"Fuzzy–PSO Optimized DBSCAN for Non-Spatial Clustering"* by Seid Mehammed Abdu (Woldia University, Ethiopia).
 
@@ -103,43 +103,7 @@ Upload a CSV file with the following required columns:
 4. **View Results**: Examine clustering visualizations, performance metrics, and statistical validation
 5. **Export Results**: Download analysis results in CSV format
 
-## Algorithm Details
-
-### PSO Parameter Optimization (Table 3)
-
-PSO is embedded in the fuzzy clustering loop; every particle encodes the
-candidate triple **(ε, MinPtsMin, MinPtsMax)**. Defaults follow Table 3 of the
-manuscript:
-
-| Parameter | Value |
-|---|---|
-| Swarm size | 30 particles |
-| Maximum iterations | 100 (early stop after 10 stale iterations) |
-| Inertia weight (w) | 0.7 |
-| Cognitive / social (c₁, c₂) | 2.0 / 2.0 |
-| ε search range | 0.10 – 1.00 |
-| MinPtsMin search range | 2 – 10 |
-| MinPtsMax search range | 5 – 20 |
-| Fitness function | Silhouette coefficient |
-
-Setting `PSO(..., mode='dbscan')` optimizes the classic two-parameter DBSCAN
-(ε, MinPts); that variant is used as the PSO-DBSCAN baseline.
-
-### Fuzzy-core membership (equation 2)
-
 ```
-μ_minp(n) = 1                                         if n >= MinPtsMax
-          = (n - MinPtsMin) / (MinPtsMax - MinPtsMin)  if MinPtsMin < n < MinPtsMax
-          = 0                                         if n <= MinPtsMin
-```
-
-A point is a fuzzy core point when μ_minp(n) > 0 (i.e. n > MinPtsMin); border
-points that are density-reachable still join the cluster with their own
-membership degree (Algorithm 1).
-
-### Z-score Normalization
-
-Features are normalized using: `z = (x - μ) / σ` (population standard deviation)
 
 
 ## Project Structure

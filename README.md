@@ -6,9 +6,9 @@ A Streamlit-based web application implementing the hybrid fuzzy–particle swarm
 
 - **Interactive Web Interface**: Built with Streamlit for easy data upload and parameter configuration
 - **PSO embedded in the fuzzy loop**: PSO continuously optimizes ε, MinPtsMin and MinPtsMax while fuzzy DBSCAN runs, using the Silhouette coefficient as fitness (Algorithm 2)
-- **Fuzzy membership (Eq. 2)**: points near cluster boundaries receive intermediate membership degrees instead of crisp assignment
+- **Fuzzy membership **: points near cluster boundaries receive intermediate membership degrees instead of crisp assignment
 - **Non-spatial clustering**: clusters the normalized attributes (year of establishment, numeric service type); GPS coordinates are used only for GIS display
-- **Four-method comparison (Table 4)**: DBSCAN, Fuzzy DBSCAN, PSO-DBSCAN and the proposed Fuzzy–PSO, scored with Silhouette, Davies-Bouldin, Calinski-Harabasz and execution time
+- **Four-method comparison **: DBSCAN, Fuzzy DBSCAN, PSO-DBSCAN and the proposed Fuzzy–PSO, scored with Silhouette, Davies-Bouldin, Calinski-Harabasz and execution time
 - **Statistical Validation**: paired t-test for significance testing across datasets
 
 
@@ -145,13 +145,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 If you use this implementation in your research, please cite:
 
-```bibtex
-@article{abdu2026fpso,
-  title={Fuzzy--PSO Optimized DBSCAN for Non-Spatial Clustering},
-  author={Mehammed, Seid},
-  journal={Under review},
-  year={2026}
-}
+
 ```
 
 ## Contact

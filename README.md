@@ -4,12 +4,12 @@ A Streamlit-based web application implementing the hybrid fuzzy–particle swarm
 
 ## Features
 
-- **Interactive Web Interface**: Built with Streamlit for easy data upload and parameter configuration
-- **PSO embedded in the fuzzy loop**: PSO continuously optimizes ε, MinPtsMin and MinPtsMax while fuzzy DBSCAN runs, using the Silhouette coefficient as fitness (Algorithm 2)
-- **Fuzzy membership **: points near cluster boundaries receive intermediate membership degrees instead of crisp assignment
-- **Non-spatial clustering**: clusters the normalized attributes (year of establishment, numeric service type); GPS coordinates are used only for GIS display
-- **Four-method comparison **: DBSCAN, Fuzzy DBSCAN, PSO-DBSCAN and the proposed Fuzzy–PSO, scored with Silhouette, Davies-Bouldin, Calinski-Harabasz and execution time
-- **Statistical Validation**: paired t-test for significance testing across datasets
+- Interactive Web Interface: Built with Streamlit for easy data upload and parameter configuration
+- PSO embedded in the fuzzy loop: PSO continuously optimizes ε, MinPtsMin and MinPtsMax while fuzzy DBSCAN runs, using the Silhouette coefficient as fitness (Algorithm 2)
+- Fuzzy membership: points near cluster boundaries receive intermediate membership degrees instead of crisp assignment
+- Non-spatial clustering: clusters the normalized attributes (year of establishment, numeric service type); GPS coordinates are used only for GIS display
+- Four-method comparison : DBSCAN, Fuzzy DBSCAN, PSO-DBSCAN and the proposed Fuzzy–PSO, scored with Silhouette, Davies-Bouldin, Calinski-Harabasz and execution time
+- Statistical Validation: paired t-test for significance testing across datasets
 
 
 ## Installation
